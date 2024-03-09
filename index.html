@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <body>
-            <h1> I love Dionn </h1>
-            <p> Dionn is the love of my life </p>
-        </body>
-    </head>
+<html lang="en">
+<head>
+<title>Encryption Game</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Encryption Game</h1>
+  <div id="section1">
+    <h2>Give two messages to encrypt</h2>
+    <div class="message-input-box"><input type="text" id="message1"  placeholder="Enter Message 1"><br></div>
+    <div class="message-input-box"><input type="text" id="message2"  placeholder="Enter Message 2"><br></div>
+    <button onclick="encryptMessage()">Encrypt Message</button>
+    <div class="encrypted-message-box"><div id="encryptedMessage" ></div></div>
+  </div>
+
+  <div id="section2">
+    <h2>Try to crack the encryption</h2>
+    <p id="note"> Encrypt a message as much as you want </p>
+    <div class="message-input-box"><input type="text" id="sendField" placeholder="Enter Message"><br></div>
+    <button onclick="sendEncryptedMessage()">Encrypt Message</button>
+    <div class="encrypted-message-box"><div id="sentMessages"></div></div>
+  </div>
+
+  <div id="section3">
+    <h2>Which message was encrypted?</h2>
+    <input type="radio" id="guess1" name="guess" value="1">
+    <label for="guess1">Message 1</label><br>
+    <input type="radio" id="guess2" name="guess" value="2">
+    <label for="guess2">Message 2</label><br>
+    <button onclick="checkGuess()">Guess</button>
+    <p id="guessResult"></p>
+  </div>
+
+  <button onclick="reset()">Reset Game</button>
+</div>
+</body>
 </html>
