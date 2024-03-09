@@ -59,6 +59,7 @@ function checkGuess() {
     if ((guess1 && choice === document.getElementById('message1').value) ||
         (guess2 && choice === document.getElementById('message2').value)) {
             alert('Congratulations! Your guess is correct.');
+            reset()
     } else {
             alert('Sorry, your guess is incorrect. Try again.');
             reset()
